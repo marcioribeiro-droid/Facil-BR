@@ -594,6 +594,10 @@
       nav .nav-link { display: none; }
     }
   </style>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('uk9pC1zftWS_5Akaw');</script>
 </head>
 <body>
 
@@ -1042,7 +1046,7 @@
     showToast('Cadastro enviado! Aguarde a ativação.');
   }
 
-  // Contato — envia para facilbr.2026@gmail.com via Formspree
+  // Contato — envia via EmailJS para facilbr.2026@gmail.com + andre@a5logistica.com.br
   async function submitContact(e) {
     e.preventDefault();
     const form = document.getElementById('contactForm');
@@ -1052,27 +1056,24 @@
     btn.disabled = true;
 
     const data = new FormData(form);
+    const pais = data.get('pais') || '+55';
+    const tel  = data.get('telefone') || '';
 
     try {
-      const res = await fetch('https://formspree.io/f/facilbr.2026@gmail.com', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+      await emailjs.send('service_khtxnyf', '7d3pl69', {
+        nome:      data.get('nome') + (data.get('sobrenome') ? ' ' + data.get('sobrenome') : ''),
+        email:     data.get('email'),
+        telefone:  pais + ' ' + tel,
+        mensagem:  data.get('mensagem')
       });
 
-      if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('contactSuccess').style.display = 'block';
-        showToast('Mensagem enviada com sucesso!');
-      } else {
-        btn.textContent = 'Enviar mensagem ✓';
-        btn.disabled = false;
-        alert('Não foi possível enviar. Tente novamente ou entre em contato pelo WhatsApp.');
-      }
+      form.style.display = 'none';
+      document.getElementById('contactSuccess').style.display = 'block';
+      showToast('Mensagem enviada com sucesso!');
     } catch {
       btn.textContent = 'Enviar mensagem ✓';
       btn.disabled = false;
-      alert('Erro de conexão. Verifique sua internet e tente novamente.');
+      alert('Não foi possível enviar. Tente novamente ou entre em contato pelo WhatsApp.');
     }
   }
 </script>
