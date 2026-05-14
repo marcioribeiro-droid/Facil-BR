@@ -1083,10 +1083,13 @@
 
     try {
       await emailjs.send('service_khtxnyf', 'template_nivx4sg', {
-        nome:      data.get('nome') + (data.get('sobrenome') ? ' ' + data.get('sobrenome') : ''),
-        email:     data.get('email'),
-        telefone:  pais + ' ' + tel,
-        mensagem:  data.get('mensagem')
+        tipo:          '✉️ Mensagem de Contato',
+        cliente_nome:  data.get('nome') + (data.get('sobrenome') ? ' ' + data.get('sobrenome') : ''),
+        cliente_email: data.get('email'),
+        cpf:           '—',
+        telefone:      pais + ' ' + tel,
+        data:          new Date().toLocaleString('pt-BR'),
+        detalhes:      data.get('mensagem')
       });
 
       form.style.display = 'none';
