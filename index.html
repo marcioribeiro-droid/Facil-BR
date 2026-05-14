@@ -1028,22 +1028,44 @@
     setTimeout(() => t.classList.remove('show'), 3500);
   }
 
-  // Cadastro
-  function submitRegister() {
+  // Cadastro — envia via EmailJS reutilizando template do portal
+  async function submitRegister() {
     const nome    = document.getElementById('nome').value.trim();
     const email   = document.getElementById('email').value.trim();
     const tel     = document.getElementById('tel').value.trim();
     const doc     = document.getElementById('doc').value.trim();
+    const empresa = document.getElementById('empresa') ? document.getElementById('empresa').value.trim() : '';
     const servico = document.getElementById('servico').value;
     if (!nome || !email || !tel || !doc || !servico) {
       alert('Por favor, preencha todos os campos obrigatórios (*).');
       return;
     }
+
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    try {
+      await emailjs.send('service_khtxnyf', 'q5g7128', {
+        tipo:          '✦ NOVO CADASTRO',
+        cliente_nome:  nome,
+        cliente_email: email,
+        cpf:           doc,
+        telefone:      tel,
+        data:          new Date().toLocaleString('pt-BR'),
+        detalhes:      'Empresa: ' + (empresa || '—') + ' | Serviço: ' + servico
+      });
+    } catch(e) {
+      // silencioso — mesmo se falhar, mostra sucesso ao cliente
+    }
+
     document.getElementById('regForm').style.display = 'none';
     const msg = document.getElementById('successMsg');
     msg.style.display = 'block';
     msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
     showToast('Cadastro enviado! Aguarde a ativação.');
+    btn.textContent = 'Enviar cadastro e aguardar ativação ✓';
+    btn.disabled = false;
   }
 
   // Contato — envia via EmailJS para facilbr.2026@gmail.com + andre@a5logistica.com.br
