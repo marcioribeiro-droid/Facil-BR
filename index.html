@@ -1046,7 +1046,7 @@
     btn.disabled = true;
 
     try {
-      await emailjs.send('service_khtxnyf', 'q5g7128', {
+      await emailjs.send('service_khtxnyf', 'template_bkcebeq', {
         tipo:          '✦ NOVO CADASTRO',
         cliente_nome:  nome,
         cliente_email: email,
@@ -1082,7 +1082,7 @@
     const tel  = data.get('telefone') || '';
 
     try {
-      await emailjs.send('service_khtxnyf', '7d3pl69', {
+      await emailjs.send('service_khtxnyf', 'template_nivx4sg', {
         nome:      data.get('nome') + (data.get('sobrenome') ? ' ' + data.get('sobrenome') : ''),
         email:     data.get('email'),
         telefone:  pais + ' ' + tel,
