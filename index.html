@@ -881,53 +881,24 @@
     </div>
 
     <div class="contact-form-box">
-      <h3>✉️ Envie uma mensagem</h3>
+      <h3>💬 Fale com um especialista</h3>
+      <p style="color:var(--gray);margin-bottom:32px;font-size:0.95rem;line-height:1.6;">Nossa equipe está pronta para responder suas dúvidas, apresentar nossos serviços e te ajudar a começar. Clique abaixo e fale agora mesmo!</p>
 
-      <form id="contactForm" onsubmit="submitContact(event)">
-        <div class="cf-row">
-          <div class="cf-group">
-            <label>Nome <span class="req">*</span></label>
-            <input type="text" name="nome" placeholder="Seu nome" required />
-          </div>
-          <div class="cf-group">
-            <label>Sobrenome</label>
-            <input type="text" name="sobrenome" placeholder="Opcional" />
-          </div>
-        </div>
+      <a href="https://wa.me/5544998450507" target="_blank" rel="noopener"
+        style="display:flex;align-items:center;justify-content:center;gap:14px;
+               background:linear-gradient(135deg,#25D366,#1da851);
+               color:#fff;font-size:1.15rem;font-weight:700;
+               padding:18px 32px;border-radius:14px;text-decoration:none;
+               box-shadow:0 8px 32px rgba(37,211,102,0.4);
+               transition:transform 0.2s,box-shadow 0.2s;
+               animation:wa-pulse 2.5s infinite;">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.473 2.027 7.774L0 32l8.469-2.001A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.844l-.485-.288-5.027 1.188 1.234-4.894-.316-.502A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.293-9.907c-.4-.2-2.363-1.165-2.729-1.299-.367-.133-.634-.2-.9.2-.267.4-1.033 1.299-1.267 1.566-.233.267-.467.3-.867.1-.4-.2-1.688-.622-3.215-1.983-1.188-1.06-1.99-2.369-2.223-2.769-.233-.4-.025-.616.175-.815.18-.179.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.169-1.233-2.969-.325-.78-.655-.674-.9-.686l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.367-1.4 3.333s1.433 3.867 1.633 4.133c.2.267 2.82 4.307 6.833 6.04.955.413 1.7.66 2.281.844.958.305 1.831.262 2.52.159.769-.114 2.363-.966 2.697-1.899.333-.933.333-1.733.233-1.899-.1-.167-.367-.267-.767-.467z"/>
+        </svg>
+        Chamar no WhatsApp agora
+      </a>
 
-        <div class="cf-full cf-group">
-          <label>Telefone <span class="req">*</span></label>
-          <div class="phone-row">
-            <select name="pais">
-              <option value="+55">🇧🇷 Brasil +55</option>
-              <option value="+1">🇺🇸 EUA +1</option>
-              <option value="+351">🇵🇹 Portugal +351</option>
-              <option value="+598">🇺🇾 Uruguai +598</option>
-              <option value="+54">🇦🇷 Argentina +54</option>
-            </select>
-            <input type="tel" name="telefone" placeholder="(00) 00000-0000" required />
-          </div>
-        </div>
-
-        <div class="cf-full cf-group">
-          <label>E-mail <span class="req">*</span></label>
-          <input type="email" name="email" placeholder="seu@email.com.br" required />
-        </div>
-
-        <div class="cf-full cf-group">
-          <label>Mensagem <span class="req">*</span></label>
-          <textarea name="mensagem" placeholder="Como podemos ajudar você?" required></textarea>
-        </div>
-
-        <button type="submit" class="cf-submit">Enviar mensagem ✓</button>
-        <p class="cf-note">Seus dados são protegidos pela LGPD e não serão compartilhados.</p>
-      </form>
-
-      <div class="success-msg" id="contactSuccess">
-        <div class="icon">✅</div>
-        <h4>Mensagem enviada!</h4>
-        <p>Recebemos seu contato. Nossa equipe responderá em breve.</p>
-      </div>
+      <p style="color:var(--gray);font-size:0.78rem;text-align:center;margin-top:16px;">⏱️ Tempo médio de resposta: menos de 5 minutos</p>
     </div>
 
   </div>
@@ -938,49 +909,25 @@
   <div class="cta-box">
     <div class="section-label">Comece Agora</div>
     <h2>Crie sua conta <span style="color:var(--green)">gratuitamente</span></h2>
-    <p>Preencha o formulário abaixo. Nossa equipe validará o cadastro e você receberá o acesso ao portal em breve.</p>
+    <p style="color:var(--gray);max-width:520px;margin:0 auto 40px;font-size:1rem;line-height:1.7;">
+      Fale agora com um de nossos atendentes. Em poucos minutos sua conta estará ativa e você terá acesso completo ao portal da Fácil BR.
+    </p>
 
-    <div class="register-form" id="regForm">
-      <div class="form-title">✦ Cadastro de novo cliente</div>
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Nome completo *</label>
-          <input type="text" id="nome" placeholder="Seu nome completo" />
-        </div>
-        <div class="form-group">
-          <label>E-mail *</label>
-          <input type="email" id="email" placeholder="email@empresa.com.br" />
-        </div>
-        <div class="form-group">
-          <label>WhatsApp *</label>
-          <input type="tel" id="tel" placeholder="(00) 00000-0000" />
-        </div>
-        <div class="form-group">
-          <label>CPF / CNPJ *</label>
-          <input type="text" id="doc" placeholder="000.000.000-00" />
-        </div>
-        <div class="form-group full">
-          <label>Empresa / Razão Social</label>
-          <input type="text" id="empresa" placeholder="Nome da empresa (opcional)" />
-        </div>
-        <div class="form-group full">
-          <label>Serviço de interesse *</label>
-          <select id="servico">
-            <option value="">— Selecione —</option>
-            <option value="rdo">Consulta RDO</option>
-            <option value="cert">Certificado Digital</option>
-            <option value="ambos">Ambos os serviços</option>
-          </select>
-        </div>
-        <button class="form-submit" onclick="submitRegister()">Enviar cadastro e aguardar ativação ✓</button>
-        <p class="form-note">Ao cadastrar você concorda com nossa política de privacidade conforme LGPD.</p>
-      </div>
-    </div>
-
-    <div class="success-msg" id="successMsg">
-      <div class="icon">✅</div>
-      <h4>Cadastro enviado com sucesso!</h4>
-      <p>Nossa equipe validará seus dados e você receberá as instruções de acesso ao portal em breve.</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;max-width:420px;margin:0 auto;">
+      <a href="https://wa.me/5544998450507?text=Olá!%20Gostaria%20de%20criar%20minha%20conta%20na%20Fácil%20BR." target="_blank" rel="noopener"
+        style="display:flex;align-items:center;justify-content:center;gap:14px;width:100%;
+               background:linear-gradient(135deg,#25D366,#1da851);
+               color:#fff;font-size:1.1rem;font-weight:700;
+               padding:18px 32px;border-radius:14px;text-decoration:none;
+               box-shadow:0 8px 32px rgba(37,211,102,0.4);
+               transition:transform 0.2s,box-shadow 0.2s;
+               animation:wa-pulse 2.5s infinite;">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.473 2.027 7.774L0 32l8.469-2.001A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.844l-.485-.288-5.027 1.188 1.234-4.894-.316-.502A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.293-9.907c-.4-.2-2.363-1.165-2.729-1.299-.367-.133-.634-.2-.9.2-.267.4-1.033 1.299-1.267 1.566-.233.267-.467.3-.867.1-.4-.2-1.688-.622-3.215-1.983-1.188-1.06-1.99-2.369-2.223-2.769-.233-.4-.025-.616.175-.815.18-.179.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.169-1.233-2.969-.325-.78-.655-.674-.9-.686l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.367-1.4 3.333s1.433 3.867 1.633 4.133c.2.267 2.82 4.307 6.833 6.04.955.413 1.7.66 2.281.844.958.305 1.831.262 2.52.159.769-.114 2.363-.966 2.697-1.899.333-.933.333-1.733.233-1.899-.1-.167-.367-.267-.767-.467z"/>
+        </svg>
+        Falar com um atendente agora
+      </a>
+      <p style="color:var(--gray);font-size:0.78rem;">⏱️ Ativação em até 24 horas • Sem burocracia</p>
     </div>
   </div>
 </section>
@@ -1107,30 +1054,36 @@
 <style>
   .wa-float {
     position: fixed;
-    bottom: 28px;
-    right: 28px;
+    bottom: 32px;
+    right: 32px;
     z-index: 9999;
-    width: 58px;
-    height: 58px;
-    background: #25D366;
-    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    gap: 12px;
+    background: linear-gradient(135deg, #25D366, #1da851);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 17px 26px 17px 20px;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.55);
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s ease;
     animation: wa-pulse 2.5s infinite;
+    white-space: nowrap;
   }
   .wa-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 28px rgba(37,211,102,0.7);
+    transform: translateY(-4px) scale(1.12);
+    box-shadow: 0 16px 48px rgba(37,211,102,0.75);
+    animation: none;
   }
   .wa-float svg {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     fill: #ffffff;
+    flex-shrink: 0;
   }
   @keyframes wa-pulse {
     0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
@@ -1139,10 +1092,11 @@
   }
 </style>
 
-<a class="wa-float" href="https://wa.me/5544998450507" target="_blank" rel="noopener" title="Falar no WhatsApp">
+<a class="wa-float" href="https://wa.me/5544998450507" target="_blank" rel="noopener">
   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.473 2.027 7.774L0 32l8.469-2.001A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.758-1.844l-.485-.288-5.027 1.188 1.234-4.894-.316-.502A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.293-9.907c-.4-.2-2.363-1.165-2.729-1.299-.367-.133-.634-.2-.9.2-.267.4-1.033 1.299-1.267 1.566-.233.267-.467.3-.867.1-.4-.2-1.688-.622-3.215-1.983-1.188-1.06-1.99-2.369-2.223-2.769-.233-.4-.025-.616.175-.815.18-.179.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.169-1.233-2.969-.325-.78-.655-.674-.9-.686l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.367-1.4 3.333s1.433 3.867 1.633 4.133c.2.267 2.82 4.307 6.833 6.04.955.413 1.7.66 2.281.844.958.305 1.831.262 2.52.159.769-.114 2.363-.966 2.697-1.899.333-.933.333-1.733.233-1.899-.1-.167-.367-.267-.767-.467z"/>
   </svg>
+  Fale conosco
 </a>
 
 </body>
